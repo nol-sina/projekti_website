@@ -1,0 +1,24 @@
+body {                                      /* Kjo na lejon qe te behet fullscreen ndryshimet tona me tutje */
+    margin: 0;
+    padding: 0;
+}
+
+.nav {                                      /* Dizajnimi i navbarit */
+    font-size: 20px;
+    width: 100%;
+    padding: 20px;                          
+    background-color: black;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;  
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav a {                                    /* Dizajnimi i tekstit brenda navbar */                            
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
