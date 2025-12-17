@@ -4,6 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 160px;
+            background:#c2bdbd;
+        }
+
+        .card {
+            background: #fff;
+            padding: 65px;
+            border-radius: 20px;
+            border: 1px solid black;
+            max-width: 420px;
+            height: 500px;
+            margin: 0 auto;
+        
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center
+        }
+
+        label {
+            display: block;
+            margin-top: 17px;
+            font-size: 15px
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 4px;
+            border: 1px solid #959599;
+            border-radius: 15px;
+            box-sizing: border-box
+        }
+
+        a{
+           text-decoration: none;
+           color: black;
+        }
+
+        a:hover{
+           text-decoration: underline; /* kur te klikohet linku te kete nenvizim*/
+        }
+
+        .error {
+            color: #ff0505;
+            font-size: 12px;
+            margin-top: 5px
+        }
+
+        .success {
+            color: #14ba46;
+            font-size: 12px;
+            margin-top: 8px;
+            text-align: center
+        }
+
+        button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            border-radius: 15px;
+            background: #000000;
+            color: #fff;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 600
+        }
+
+        .agree {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 20px 0;
+        }
+
+        .agree label {
+            display: inline;        
+            margin-top: 0;          
+            white-space: nowrap;    
+        }
+
+        .link{
+            text-align: center;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="card">
@@ -35,7 +127,7 @@
             <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
 
             <div class="link">
-                <span>Already have an account? <a href="#"><b>Login</b></a></span>
+                <span>Already have an account? <a href="#"><b>LogIn</b></a></span>
             </div>
         </form>
     </div>
