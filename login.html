@@ -121,5 +121,56 @@
             </div>
         </form>
     </div>
+
+    <script>
+        const usernameRe = /^[a-zA-Z0-9._-]{4,20}$/;
+        const passwordRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+        const form = document.getElementById('loginForm');
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+
+        const usernameError = document.getElementById('usernameError');
+        const passwordError = document.getElementById('passwordError');
+        const formSuccess = document.getElementById('formSuccess');
+
+        function clearErrors(){
+            [usernameError, passwordError, formSuccess].forEach(el => el.textContent = '');
+        }
+
+        function validateField(){
+            let valid = true;
+            clearErrors();
+
+            if(!usernameRe.test(username.value.trim())){
+                usernameError.textContent = 'Please enter your username!';
+                valid = false;
+            }
+
+            if(!passwordRe.test(password.value)){
+                passwordError.textContent = 'Please enter your password!';
+                valid = false;
+            }
+
+            return valid;
+
+        }
+
+        username.addEventListener('input', () => {if (usernameRe.test(username.value.trim())) usernameError.textContent = '';});
+        password.addEventListener('input', () => {if (passwordRe.test(password.value)) passwordError.textContent = '';});
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.textContent = '';
+
+            if(validateField()){
+                formSuccess.textContent = 'Successful login!';
+                form.reset();
+            }
+            else{
+                formSuccess.textContent = '';
+            }
+        });
+    </script>
 </body>
 </html>
