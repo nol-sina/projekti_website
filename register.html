@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 
+    <link rel="stylesheet" href="navbar.css">
+
     <style>
         body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 160px;
             background:#c2bdbd;
         }
 
@@ -95,41 +96,58 @@
             font-weight: 400;
             margin-top: 20px;
         }
+
+        .pjesaregister{
+            margin-top: 50px;   /* hapësirë poshtë navbar */
+            display: flex;
+            justify-content: center;
+        }
+
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>Register</h2>
-        <form id="registerForm" novalidate>
-            <label for="username">Username</label>
-            <input id="username" name="username" type="text" required placeholder="Min 4 characters" />
-            <div id="usernameError" class=" error" aria-live="polite"></div>
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="Example@domain.com" />
-            <div id="emailError" class="error" aria-live="polite"></div>
+    <nav class="nav">
+        <a href="" class="athletix">ATHLETIX</a>
+        <a href="home.html"><b>Home</b></a>
+        <a href="login.html"><b>LogIn</b></a>
+        <a href="register.html"><b>Register</b></a>  
+    </nav>
 
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password" required placeholder="Min 8 (1 uppercase, 1 digit, 1 special)" />
-            <div id="passwordError" class="error" aria-live="polite"></div>
+    <div class="pjesaregister">
+        <div class="card">
+            <h2>Register</h2>
+            <form id="registerForm" novalidate>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" required placeholder="Min 4 characters" />
+                <div id="usernameError" class=" error" aria-live="polite"></div>
 
-            <label for="confirm">Confirm Password</label>
-            <input id="confirm" name="confirm" type="password" required placeholder="Reset password" />
-            <div id="confirmError" class="error" aria-live="polite"></div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="Example@domain.com" />
+                <div id="emailError" class="error" aria-live="polite"></div>
 
-            
-            <div class="agree">
-                <input type="checkbox" id="agree">
-                <label for="agree">I agree to terms & conditions</label>
-            </div>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required placeholder="Min 8 (1 uppercase, 1 digit, 1 special)" />
+                <div id="passwordError" class="error" aria-live="polite"></div>
 
-            <button type="submit">Register</button>
-            <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" name="confirm" type="password" required placeholder="Reset password" />
+                <div id="confirmError" class="error" aria-live="polite"></div>
 
-            <div class="link">
-                <span>Already have an account? <a href="login.html"><b>LogIn</b></a></span>
-            </div>
-        </form>
+
+                <div class="agree">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">I agree to terms & conditions</label>
+                </div>
+
+                <button type="submit">Register</button>
+                <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
+
+                <div class="link">
+                    <span>Already have an account? <a href="login.html"><b>LogIn</b></a></span>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
