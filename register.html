@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="card">
+        <h2>Register</h2>
+        <form id="registerForm" novalidate>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" required placeholder="Min 4 characters" />
+            <div id="usernameError" class=" error" aria-live="polite"></div>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="Example@domain.com" />
+            <div id="emailError" class="error" aria-live="polite"></div>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required placeholder="Min 8 (1 uppercase, 1 digit, 1 special)" />
+            <div id="passwordError" class="error" aria-live="polite"></div>
+
+            <label for="confirm">Confirm Password</label>
+            <input id="confirm" name="confirm" type="password" required placeholder="Reset password" />
+            <div id="confirmError" class="error" aria-live="polite"></div>
+
+            
+            <div class="agree">
+                <input type="checkbox" id="agree">
+                <label for="agree">I agree to terms & conditions</label>
+            </div>
+
+            <button type="submit">Register</button>
+            <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
+
+            <div class="link">
+                <span>Already have an account? <a href="#"><b>Login</b></a></span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
