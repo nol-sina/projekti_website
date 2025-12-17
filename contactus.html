@@ -1,0 +1,142 @@
+<!--
+    E kemi bere ne forme tabelare por ndoshta do e ndryshojme ne form informuese, 
+    te jemi korrekt nese ka ndryshim drastik ne fazen e dyte e kemi si deshmi kete koment ketu. 
+    JU FALEMINDERIT PER MIREKUPTIM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="navbar.css">
+
+    <style>
+        body {
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            background: #c2bdbd;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background: url(contactusimg.webp) left/cover;
+
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+        }
+
+        .card{
+            background-color: rgb(255, 255, 255);
+            padding: 65px;
+            border-radius: 20px;
+            border: 1px solid black;
+            max-width: 460px;
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center
+        }
+
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 15px
+        }
+
+        input {
+            width: 105%;
+            padding: 10px 12px;
+            margin-top: 5px;
+            border: 1px solid #959599;
+            border-radius: 15px;
+            box-sizing: border-box
+        }
+
+        textarea{
+            width: 100%;
+            height: 90px;
+            border-radius: 20px;
+            padding: 10px;
+            resize: none;
+            font-size: 10px;
+        }
+
+        button {
+            margin-top: 35px;
+            width: 105%;
+            padding: 10px;
+            border: 0;
+            border-radius: 15px;
+            background: #000000;
+            color: #fff;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 600
+        }
+
+        .footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="nav">
+        <a href="" class="athletix" style="color: white; text-decoration: none; font-size: 22px; margin-left: 20px; margin-right: auto;"><b>ATHLETIX</b></a>
+        <a href="Home.html"><b>Home</b></a>
+        <a href="aboutus.html"><b>AboutUs</b></a>
+        <a href="login.html"><b>LogIn</b></a>
+        <a href="register.html"><b>Register</b></a>
+        <a href="contactus.html"><b>ContactUs</b></a>
+    </nav>
+    
+    <div class="main">
+        <div class="container">
+            <div class="card">
+                <h2>Contact Us</h2>
+                <form class="form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" required placeholder="Write your message..."></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p>Copyright ©2025 ATHLETIX</p>
+    </footer>
+</body>
+</html>

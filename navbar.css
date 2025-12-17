@@ -23,3 +23,7 @@ body {                                      /* Kjo na lejon qe te behet fullscre
     margin: 0 30px;
 }
 
+.nav a:hover{
+    text-decoration: underline;
+}
+
