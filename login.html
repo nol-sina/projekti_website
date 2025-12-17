@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
 
+    <link rel="stylesheet" href="navbar.css">
+
     <style>
         body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 180px;
             background:#c2bdbd;
         }
         
@@ -77,12 +78,6 @@
             font-weight: 600
         }
 
-        .col-1{
-            font-size: 15px;
-            text-align: center;
-            margin-top: 13px;
-        }
-
         .link{
             text-align: center;
             font-weight: 400;
@@ -95,74 +90,75 @@
             color: white;
         }
 
+        .pjesalogin{
+            margin-top: 80px;   /* hapësirë poshtë navbar */
+            display: flex;
+            justify-content: center;
+        }
+
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>LogIn</h2>
-        <form id="loginForm" novalidate>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required placeholder="Enter Username">
-            <div id="usernameError" class="error" aria-live="polite"></div>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Enter password">
-            <div id="passwordError" class="error" aria-live="polite"></div>
+    <nav class="nav">
+        <a href="" class="athletix">ATHLETIX</a>
+        <a href="home.html"><b>Home</b></a>
+        <a href="login.html"><b>LogIn</b></a>
+        <a href="register.html"><b>Register</b></a>  
+    </nav>
+    
+    <div class="pjesalogin">
+        <div class="card">
+            <h2>LogIn</h2>
+            <form id="loginForm" novalidate>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter Username">
+                <div id="usernameError" class="error" aria-live="polite"></div>
 
-            <button type="submit">Login</button>
-            <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter password">
+                <div id="passwordError" class="error" aria-live="polite"></div>
 
-            <div class="col-1">
-                <a href="#">Forgot password?</a>
-            </div>
+                <button type="submit">Login</button>
+                <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
 
-            <div class="link">
-                <span>Don't have an account? <a href="register.html"><b>Register</b></a></span>
-            </div>
-        </form>
+                <div class="link">
+                    <span>Don't have an account? <a href="register.html"><b>Register</b></a></span>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
         const usernameRe = /^[a-zA-Z0-9._-]{4,20}$/;
         const passwordRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-
         const form = document.getElementById('loginForm');
         const username = document.getElementById('username');
         const password = document.getElementById('password');
-
         const usernameError = document.getElementById('usernameError');
         const passwordError = document.getElementById('passwordError');
         const formSuccess = document.getElementById('formSuccess');
-
         function clearErrors(){
             [usernameError, passwordError, formSuccess].forEach(el => el.textContent = '');
         }
-
         function validateField(){
             let valid = true;
             clearErrors();
-
             if(!usernameRe.test(username.value.trim())){
                 usernameError.textContent = 'Please enter your username!';
                 valid = false;
             }
-
             if(!passwordRe.test(password.value)){
                 passwordError.textContent = 'Please enter your password!';
                 valid = false;
             }
-
             return valid;
-
         }
-
         username.addEventListener('input', () => {if (usernameRe.test(username.value.trim())) usernameError.textContent = '';});
         password.addEventListener('input', () => {if (passwordRe.test(password.value)) passwordError.textContent = '';});
-
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             formSuccess.textContent = '';
-
             if(validateField()){
                 formSuccess.textContent = 'Successful login!';
                 form.reset();
@@ -172,5 +168,6 @@
             }
         });
     </script>
+    
 </body>
 </html>
