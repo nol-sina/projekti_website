@@ -11,6 +11,11 @@
         body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             background:#c2bdbd;
+            background: url(loginimg.webp) left/cover;
+
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         .card {
@@ -96,12 +101,23 @@
             justify-content: center;
         }
 
+        .footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+
+            margin-top: auto;
+        }
+
+        
+
     </style>
 </head>
 <body>
 
     <nav class="nav">
-        <a href="" class="athletix"><b>ATHLETIX</b></a>
+        <a href="" style="color: white; text-decoration: none; font-size: 22px; margin-left: 20px; margin-right: auto;"><b>ATHLETIX</b></a>
         <a href="Home.html"><b>Home</b></a>
         <a href="aboutus.html"><b>AboutUs</b></a>
         <a href="login.html"><b>LogIn</b></a>
@@ -169,6 +185,11 @@
             }
         });
     </script>
+
+
+    <footer class="footer">
+        <p>Copyright ©2025 ATHLETIX</p>
+    </footer>
     
 </body>
 </html>
